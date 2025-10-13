@@ -11,28 +11,34 @@
 
     <name>GWT/J2CL compatible missed classes from stdlib</name>
     <description>GWT/J2CL missed classes from stdlib</description>
-    <url>https://github.com/treblereel</url>
+    <url>https://github.com/treblereel/missed-stdlib-classes-for-j2cl-gwt</url>
 
-    <developers>
-        <developer>
-            <id>treblereel</id>
-            <name>Dmitrii Tikhomirov</name>
-            <email>chani.liet@gmail.com</email>
-        </developer>
-    </developers>
+    <organization>
+        <name>Dmitrii Tikhomirov</name>
+        <url>https://github.com/treblereel</url>
+    </organization>
 
     <licenses>
         <license>
-            <name>Apache License Version 2.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
-            <distribution>repo</distribution>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
 
-    <organization>
-        <name>Treblereel</name>
-        <url>https://github.com/treblereel</url>
-    </organization>
+    <developers>
+        <developer>
+            <name>The GWT Authors</name>
+            <organization>The GWT Project Authors</organization>
+            <url>https://github.com/gwtproject</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/treblereel/missed-stdlib-classes-for-j2cl-gwt.git</connection>
+        <developerConnection>scm:git:ssh://github.com/treblereel/missed-stdlib-classes-for-j2cl-gwt.git</developerConnection>
+        <url>https://github.com/treblereel/missed-stdlib-classes-for-j2cl-gwt/tree/master</url>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -161,10 +167,12 @@
                         </executions>
                     </plugin>
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-deploy-plugin</artifactId>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                        <version>0.9.0</version>
+                        <extensions>true</extensions>
                         <configuration>
-                            <skip>false</skip>
+                            <publishingServerId>sonatype</publishingServerId>
                         </configuration>
                     </plugin>
                 </plugins>
