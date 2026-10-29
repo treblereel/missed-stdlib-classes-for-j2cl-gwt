@@ -15,7 +15,7 @@
  */
 package java.io;
 
-import java.nio.Numbers;
+import org.gwtproject.nio.Numbers;
 
 public class DataInputStream extends InputStream implements DataInput {
 
